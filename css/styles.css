@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Search bar */
+
+.search-bar {
+  /* background-color: #fcfcfc; */
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#search-input {
+  height: 40px;
+  width: 400px;
+  padding: 0px 10px;
+  margin-right: 20px;
+  margin-left: 20px;
+  border: 1px solid lightgrey;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+#search-input:focus {
+  outline: none;
+  border: 1px solid lightskyblue;
+  transition-duration: 1000ms;
+}
+
+.photo-gallery {
+  margin: 0 auto;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-bottom: 80px;
+  max-width: 1024px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.gallery-item {
+  flex: auto;
+  transition: transform 0.4s cubic-bezier(.7, -0.39, .31, 1.38);
+}
+
+.gallery-item:hover {
+  transform: rotate(-4deg) scale(1.1) translateY(-4px);  
+}
+
+.thumbnail-img {
+  margin: auto;
+  display: block;
+  padding: 10px;
+  padding-bottom: 30px;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 580px) {
+  
+  .photo-gallery {
+    padding-left: 2em;
+    padding-right: 2em;
+    justify-content: space-evenly;
+  }
+
+  .gallery-item {
+    flex-basis: 50%;
+  }
+
+}
+
+@media (min-width: 768px) {
+  
+  .gallery-item {
+    flex-basis: 33%;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  
+  .gallery-item {
+    flex-basis: 25%;
+  }
+
+}
+
+/* LIGHTBOX STYLES */
+/* Display arrows on small screens so tappable area is known to user. */
+
+.lb-nav a.lb-prev,
+.lb-nav a.lb-next {
+  opacity: 1;
+}
+
+.lightbox .lb-image {
+  border: none;
+}
+
+.lightboxOverlay {
+  background-color: #282C34;
+  opacity: .95;
+}
+
+.lb-caption {
+  font-size: 16px;
+}
+
+@media(min-width: 768px) {
+
+  .lb-nav a.lb-prev,
+  .lb-nav a.lb-next {
+    opacity: 0;
+  }
+}
