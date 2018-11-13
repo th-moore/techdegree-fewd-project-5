@@ -118,4 +118,14 @@
   .lb-nav a.lb-next {
     opacity: 0;
   }
+
+  .lb-nav a.lb-prev {
+    position: absolute;
+    left: -80px;
+  }
+
+  .lb-nav a.lb-next {
+    position: absolute;
+    right: -80px;
+  }
 }
