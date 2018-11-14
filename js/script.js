@@ -19,9 +19,9 @@ const filterImages = () => {
     
     // If the caption matches the search input then display. Else hide the image.
     if (caption.toLowerCase().indexOf(filterValue.value) > -1) {
-      images[i].style.display = '';
+      images[i].parentElement.style.display = '';
     } else {
-      images[i].style.display = 'none';
+      images[i].parentElement.style.display = 'none';
     }
   }
 }
